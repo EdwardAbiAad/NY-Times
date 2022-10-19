@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/txt_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin"
+        android:gravity="center"
+        android:textColor="@color/purple_200"
+        android:textSize="24sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_period_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/item_margin"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_period_7"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginHorizontal="@dimen/item_margin"
+            android:layout_weight="1"
+            android:text="7"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_period_30"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="@dimen/item_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_weight="1"
+            android:text="30"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_article" />
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</LinearLayout>
