@@ -1,4 +1,4 @@
-# Android Example Application
+# NY Times Application
 
 This is an example Android Application README to show briefly the sections your app README should contain.
 
